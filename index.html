@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colossus Headphones</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS for animations and styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Custom button styling */
+        .btn-primary {
+            background-color: #FDE047; /* A bright yellow */
+            color: #121212;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #FBBF24; /* A darker yellow */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(253, 224, 71, 0.2);
+        }
+
+        .btn-secondary {
+             background-color: #374151;
+             color: #ffffff;
+             transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4B5563;
+            transform: translateY(-2px);
+        }
+
+        /* Card hover effect */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Animation on scroll setup */
+        .reveal {
+            position: relative;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 1s all ease;
+        }
+
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="absolute top-0 left-0 right-0 z-10 py-6 px-4 md:px-8">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/Logo.png" alt="Logo" class="h-8 w-8 mr-2">
+                <span class="text-xl font-bold">Aura</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#" class="hover:text-yellow-400 transition-colors">Products</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Features</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Support</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer hover:text-yellow-400 transition-colors"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cursor-pointer hover:text-yellow-400 transition-colors"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center pt-20" style="background: radial-gradient(circle, #3a3a3a 0%, #121212 70%);">
+        <div class="absolute inset-0 overflow-hidden">
+             <img src="assets/bg.png" alt="Colossus X9 Headphones" class=" h-full w-full" style="height: 100vh; margin-top: 0px;">
+        </div>
+        <div class="relative z-10 container mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold">Colossus X9</h1>
+            <p class="text-lg md:text-xl text-gray-300 mt-4 mb-8">Pure, Uncompromising Sound</p>
+            <button class="btn-secondary font-bold py-3 px-8 rounded-lg">Buy Now</button>
+        </div>
+        
+        <!-- Hero features -->
+        <div class="absolute bottom-10 md:bottom-20 left-0 right-0">
+            <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+                <div class="text-left">
+                    <h3 class="font-bold text-lg">269K</h3>
+                    <p class="text-gray-400">Happy Customers</p>
+                </div>
+                <div class="text-right">
+                    <h3 class="font-bold text-lg">Flagship</h3>
+                    <p class="text-gray-400">Top Rated Product</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Launches Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <div class="bg-gray-800 inline-block p-8 rounded-lg reveal">
+                <h2 class="text-sm font-semibold text-yellow-400 tracking-widest">NEW LAUNCHES</h2>
+                <p class="text-2xl md:text-3xl font-bold mt-2">Let the inner beast out</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-gray-900 rounded-lg overflow-hidden text-left reveal">
+                    <div class="bg-yellow-400 p-8">
+                        <img src="assets/card1.jpg" alt="Aura Forge VS102" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Aura Forge VS102</h3>
+                        <p class="text-lg font-semibold mt-2 text-yellow-400">$ 189.99 <span class="text-gray-500 line-through ml-2">$ 249.99</span></p>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card bg-gray-900 rounded-lg overflow-hidden text-left reveal">
+                    <div class="bg-yellow-400 p-8">
+                        <img src="assets/card2.jpg" alt="Aura Forge CL1.1" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Aura Forge CL1.1</h3>
+                        <p class="text-lg font-semibold mt-2 text-yellow-400">$ 155.55 <span class="text-gray-500 line-through ml-2">$ 199.99</span></p>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card bg-gray-900 rounded-lg overflow-hidden text-left reveal">
+                    <div class="bg-yellow-400 p-8">
+                        <img src="assets/card3.png" alt="Aura Forge TW7.2" class="w-full h-48 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Aura Forge TW7.2</h3>
+                        <p class="text-lg font-semibold mt-2 text-yellow-400">$ 185.99 <span class="text-gray-500 line-through ml-2">$ 229.99</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold">Features Of Product</h2>
+                <button class="btn-primary font-semibold py-2 px-6 rounded-lg">View All</button>
+            </div>
+            <div class="space-y-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-800 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between reveal">
+                    <div class="text-center md:text-left md:w-1/2">
+                        <span class="text-8xl font-extrabold text-gray-700 opacity-50">01</span>
+                        <h3 class="text-3xl font-bold mt-[-40px] ml-4">Perfect Sound Quality</h3>
+                        <p class="text-gray-400 mt-4 max-w-md ml-4">The sound quality of our headphones is the best in the market. We provide the best quality sound.</p>
+                        <button class="btn-primary font-semibold py-2 px-6 rounded-lg mt-6 ml-4">Learn More</button>
+                    </div>
+                    <div class="mt-8 md:mt-0">
+                        <img src="assets/card4.jpg" alt="Sound Quality" class="w-64 h-64 object-cover rounded-full">
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-gray-800 rounded-2xl p-8 reveal">
+                        <span class="text-8xl font-extrabold text-gray-700 opacity-50">02</span>
+                        <h3 class="text-3xl font-bold mt-[-40px] ml-4">Awesome Microphone</h3>
+                        <p class="text-gray-400 mt-4 max-w-md ml-4">The microphone is designed to provide crystal clear sound for calls and recordings.</p>
+                        <button class="btn-primary font-semibold py-2 px-6 rounded-lg mt-6 ml-4">Learn More</button>
+                        <img src="assets/card5.jpg" alt="Microphone" class="w-full h-48 object-contain mt-6">
+                    </div>
+                    <div class="bg-gray-800 rounded-2xl p-8 reveal">
+                         <span class="text-8xl font-extrabold text-gray-700 opacity-50">03</span>
+                        <h3 class="text-3xl font-bold mt-[-40px] ml-4">Easy to control</h3>
+                        <p class="text-gray-400 mt-4 max-w-md ml-4">Control your music and calls with ease using the intuitive on-ear controls.</p>
+                        <button class="btn-primary font-semibold py-2 px-6 rounded-lg mt-6 ml-4">Learn More</button>
+                        <img src="assets/card6.jpg" alt="Easy Control" class="w-full h-48 object-contain mt-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 px-4">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="assets/Logo.png" alt="Logo" class="h-8 w-8 mr-2">
+                    <span class="text-xl font-bold text-white">Aura</span>
+                </div>
+                <p class="text-sm">High-fidelity audio, crafted for the discerning listener.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Products</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-yellow-400">Headphones</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Earbuds</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Speakers</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Accessories</a></li>
+                </ul>
+            </div>
+             <div>
+                <h4 class="font-bold text-white mb-4">Features</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-yellow-400">Noise Cancellation</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Wireless</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Studio Quality</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Long Battery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4">Contact</h4>
+                 <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-yellow-400">support@aura.com</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">+1 888-555-0199</a></li>
+                </ul>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hover:text-yellow-400"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hover:text-yellow-400"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hover:text-yellow-400"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+            <p>&copy; 2024 Made with ❤️ by Aura</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // JavaScript for scroll animations
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // To check the elements on page load
+        reveal();
+    </script>
+</body>
+</html>
